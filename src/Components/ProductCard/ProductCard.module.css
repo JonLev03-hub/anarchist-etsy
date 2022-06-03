@@ -1,0 +1,72 @@
+.productCard {
+    width:clamp(180px, 25vw, 326px);
+    height:fit-content;
+    margin:10px;
+    position: relative;
+}
+.productCard * {
+    cursor: pointer;
+}
+.productCard img {
+    width:100%;
+    height:100%;
+    margin:0;
+}
+.like {
+    position:absolute;
+    top:5px;
+    right:5px;
+    width:var(--iconSize);
+    height: var(--iconSize);
+    background-color:var(--white);
+    border:none;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    transform:translate(0,10px);
+}
+.like img {
+    width: 70%;
+    height: 70%;
+    padding: 15%;
+    border-radius: 50%;
+    border: 3px solid transparent;
+}
+.productCardInfo {
+    text-align: left;
+}
+.stars {
+    display: flex;
+}
+.stars img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+}
+.title {
+    font-size: .9rem;
+}
+.productCardInfo h3 {
+    font-size: 1em;
+    font-weight: bold;
+    display: inline;
+}
+.freeShipping {
+    text-align:center;
+    background-color:var(--secondary, #fce46b );
+    display:inline-block;
+    margin-left:10px;
+    font-size:.9rem;
+    /* font-weight:bold; */
+    padding:1px 8px;
+    border-radius: .6rem;
+}
+
+.productCard:hover .like {
+    opacity:1;
+    transform: translate(0, 0);
+}

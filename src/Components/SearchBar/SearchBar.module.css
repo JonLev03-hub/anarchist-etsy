@@ -1,0 +1,31 @@
+.searchBar {
+    position:relative;
+    height:40px;
+    width:60vw;
+    max-width:300px;
+    margin:0 auto;
+}
+
+.searchInput {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height:var(--iconSize);
+    width:90%;
+    padding:0; 
+    padding-left:15px;
+    margin:0;
+    border: 2px solid black;
+    border-radius:var(--iconSize);
+}
+.searchBtn {
+    width:var(--iconSize);
+    height:100%;    
+    position:absolute;
+    top:0;
+    right:5px;
+    padding:0;
+    margin:0;
+    border:none;
+    background-color:transparent;
+}
