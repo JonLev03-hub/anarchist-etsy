@@ -25,7 +25,10 @@ export default function Navbar() {
 
   return (
     <nav className={Styles.nav}>
-      <h1 className={Styles.title}>Anarchist Etsy</h1>
+      <Link to="/">
+        {" "}
+        <h1 className={Styles.title}>Anarchist Etsy</h1>
+      </Link>
       {(toggleMenu || screenWidth > 1060) && (
         <>
           <div className={Styles.backdrop} onClick={toggleNav}></div>
@@ -35,12 +38,12 @@ export default function Navbar() {
             </li>
             <ul className={Styles.iconList}>
               <li className={Styles.items}>
-                <Link to="/">
+                <Link to="/liked">
                   <img src=".\icons\Likes.svg" />
                 </Link>
               </li>
               <li className={Styles.items}>
-                <Link to="/contact">
+                <Link to="/profile">
                   <img src=".\icons\Profile.svg" />
                 </Link>
               </li>

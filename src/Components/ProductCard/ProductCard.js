@@ -1,4 +1,5 @@
 import Styles from "./ProductCard.module.css";
+import { Link } from "react-router-dom";
 export default function ProductCard(props) {
   return (
     <div className={Styles.productCard}>
@@ -24,6 +25,8 @@ export default function ProductCard(props) {
         {props.freeShipping && (
           <p className={Styles.freeShipping}>Free Shipping</p>
         )}
+
+        <p className={Styles.storeName}>Sold by {props.storeName}</p>
       </div>
     </div>
   );

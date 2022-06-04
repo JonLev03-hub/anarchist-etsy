@@ -1,7 +1,6 @@
-import Styles from "./Browse.module.css";
+import Styles from "./Liked.module.css";
 import ProductCard from "../ProductCard/ProductCard";
-export default function Browse() {
-  // Code to get all of the items by filter
+export default function Liked() {
   const items = [
     {
       image:
@@ -60,18 +59,19 @@ export default function Browse() {
   ];
   return (
     <main className={Styles.main}>
-      <div className={Styles.cardContainer}>
+      <section className={Styles.cardContainer}>
         {items.map((item) => (
           <ProductCard
             key={item.id}
             image={item.image}
             name={item.name}
+            store={item.storeName}
             price={item.price}
             freeShipping={item.freeShipping}
             stars={item.stars}
           />
         ))}
-      </div>
+      </section>
     </main>
   );
 }
